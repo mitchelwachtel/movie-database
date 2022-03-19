@@ -8,7 +8,7 @@ const db = mysql.createConnection({
   database: "movie_db",
 });
 
-updateRev.post("/", (req, res) => {
+updateRev.put("/", (req, res) => {
   // TODO: update a movie review
   const {review, reviewId} = req.body;
 
