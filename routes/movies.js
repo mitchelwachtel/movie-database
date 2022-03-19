@@ -23,6 +23,20 @@ movies.get("/", (req, res) => {
 movies.delete("/:id", (req, res) => {
   const id = req.params.id;
   // TODO: deletes a 'route' when tested w/ insomnia
+  db.query(`DELETE FROM movies WHERE id = ?`, id, function (err, results) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('success');
+    }
+  });
+  db.query(`SELECT * FROM movies`, function (err, results) {
+    if (err) {
+      console.error(err);
+    } else {
+      res.json(results);
+    }
+  });
 });
 
 module.exports = movies;
