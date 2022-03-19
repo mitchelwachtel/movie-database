@@ -7,14 +7,16 @@ const db = mysql.createConnection(
     user: "root",
     password: "rootroot",
     database: "movie_db",
-  },
-  console.log(`movie_db`)
+  }
 );
 
 movies.get("/", (req, res) => {
-  // TODO: renders a list of movies
   db.query("SELECT * FROM movies", function (err, results) {
-    console.log(results);
+    if (err) {
+        console.error(err);
+      } else {
+        res.json(results);
+      }
   });
 });
 
