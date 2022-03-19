@@ -1,15 +1,15 @@
-INSERT INTO book_prices (price)
-VALUES (1),
-       (2),
-       (5),
-       (10),
-       (15);
+INSERT INTO movies (movie_name)
+VALUES ('Dumb & Dumber'),
+       ('Zoolander'),
+       ('Mission Impossible'),
+       ('Goldfinger'),
+       ('Avengers');
 
-INSERT INTO favorite_books (book_name, in_stock, book_price)
-VALUES ("The Great Gatsby", true, 1),
-       ("Huckleberry Finn", true, 3),
-       ("100 Years of Solitude", false, 5),
-       ("Things Fall Apart", false, 1),
-       ("Crime and Punishment", true, 2),
-       ("Moby Dick", true, 4),
-       ("Decameron", false, 1);
+INSERT INTO reviews (review, movie_id)
+VALUES ("A great fun time!", 1),
+       ("Tom is a hero", 3),
+       ("Action Packed", 5),
+       ("I laughed until I peed", 1),
+       ("Hansel is so hot right now", 2),
+       ("Enjoyment Galore!", 4),
+       ("Now I want to road trip with my best friend", 1);
